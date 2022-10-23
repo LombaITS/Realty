@@ -18,6 +18,9 @@ const Referensi = ({ referensiUser, setReferensiUser }) => {
               &times;
             </div>
           </div>
+          <div className='sectionSatu text-danger mb-2'>
+            *sistem ini hanya frontend prototype
+          </div>
           <div class='form'>
             <div class='form-element'>
               <div>
