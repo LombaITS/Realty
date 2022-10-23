@@ -199,6 +199,15 @@ const AssetDetail = () => {
               placeholder='Ya/Tidak'
             />
           </div>
+          <div className='kamartidur'>
+            <div className='labelForm'>Harga Jual property</div>
+            <input
+              type='text'
+              name='kabupaten'
+              id='kabupaten'
+              placeholder='Ya/Masukkan Harga Jual Property'
+            />
+          </div>
         </div>
 
         <ButtonContainer>

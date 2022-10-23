@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import mandiri from "../img/mandiri.png";
 
 const PembelianStepThree = ({ setStepActive }) => {
+  const navigate = useNavigate();
+
+  const nextStep = () => {
+    navigate("/daftartransaksi");
+  };
   return (
     <ThreeStyle>
       <div className='head'>
@@ -55,7 +61,9 @@ const PembelianStepThree = ({ setStepActive }) => {
       </div>
       <ButtonContainer>
         {/* <ButtonStyled className='secondary'>Kembali</ButtonStyled> */}
-        <ButtonStyled className='primary'>Selanjutnya</ButtonStyled>
+        <ButtonStyled className='primary' onClick={nextStep}>
+          Selanjutnya
+        </ButtonStyled>
       </ButtonContainer>
     </ThreeStyle>
   );

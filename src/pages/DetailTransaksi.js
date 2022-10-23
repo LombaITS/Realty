@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 import Breadcrumb from "../components/Breadcrumb";
@@ -7,7 +7,13 @@ import HeaderText from "../components/HeaderText";
 import Home2 from "../img/house2.png";
 import homeTransactionIcon from "../img/homeTransactionIcon.png";
 
+import sertifikatDigital from "../img/sertifikatDigital.png";
 const DetailTransaksi = () => {
+  const [certificateShow, setCertificateShow] = useState(false);
+
+  const viewCertificate = () => {
+    setCertificateShow(!certificateShow);
+  };
   return (
     <TransaksiStyled className='container'>
       <Breadcrumb
@@ -153,7 +159,17 @@ const DetailTransaksi = () => {
               0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db
             </div>
           </div>
-          <div className='lihatSertifikat'>Lihat Sertifikat Digital</div>
+          <div className='lihatSertifikat' onClick={viewCertificate}>
+            Lihat Sertifikat Digital
+          </div>
+
+          {certificateShow && (
+            <img
+              className='sertifikatDigital mb-4'
+              src={sertifikatDigital}
+              alt='preview sertifikat'
+            />
+          )}
         </TransactionItem>
       </div>
     </TransaksiStyled>
@@ -161,6 +177,9 @@ const DetailTransaksi = () => {
 };
 
 const TransaksiStyled = styled.div`
+  .sertifikatDigital {
+    width: 50%;
+  }
   .transaksiContainer {
     margin-top: 20px;
     .filterTransaksi {
