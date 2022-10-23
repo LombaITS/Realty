@@ -50,6 +50,12 @@ const SideBar = ({
       : (document.body.style.overflow = "hidden");
     navigate("/propertisaya");
   };
+
+  const waitingForBackend = () => {
+    alert(
+      "Sistem ini masih frontend saja. Backend dari sistem ini masih dalam tahap pengerjaan"
+    );
+  };
   return (
     <SideBarContainer>
       <div className='container'>
@@ -63,11 +69,15 @@ const SideBar = ({
             <div onClick={propertiHander}>
               <SideBarItem icon={myProperty} desc={`Properti Saya`} />
             </div>
-            <SideBarItem icon={love} desc={`Wishlist`} />
+            <div onClick={waitingForBackend}>
+              <SideBarItem icon={love} desc={`Wishlist`} />
+            </div>
             <div onClick={transaksiHandler}>
               <SideBarItem icon={transaksi} desc={`Daftar Transaksi`} />
             </div>
-            <SideBarItem icon={pengaturan} desc={`Pengaturan`} />
+            <div onClick={waitingForBackend}>
+              <SideBarItem icon={pengaturan} desc={`Pengaturan`} />
+            </div>
             <div onClick={logoutHandler}>
               <SideBarItem icon={logout} desc={`Keluar`} />
             </div>

@@ -40,7 +40,9 @@ const ChatDetail = ({ setIsChatClicked, isChatClicked }) => {
       </div>
       <hr />
       <div className='percakapan'>
-        <div className='tanggal'>Jumat, 23 Jun 2021 • 21:00</div>
+        <div className='tanggal'>
+          Jumat, 23 Jun 2021 • 21:00 • Belum terhubung dengan backend{" "}
+        </div>
         <div className='percakapanItem user'>
           <div className='text'>Halo Selamat Malam</div>
           <div className='status'>

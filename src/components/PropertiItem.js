@@ -19,6 +19,10 @@ const PropertiItem = ({
   const moreDetailHandler = () => {
     navigate("/detailtransaksi");
   };
+
+  const fillPropertyDetail = () => {
+    navigate("/assetdetail");
+  };
   return (
     <TransactionItem>
       <div className='title'>
@@ -127,7 +131,7 @@ const PropertiItem = ({
               Lihat Detail Transaksi
             </div>
             <div className='token success'>Jual</div>
-            <div className='more'>
+            <div className='more' onClick={fillPropertyDetail}>
               <svg
                 width='19'
                 height='4'
