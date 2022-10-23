@@ -6,8 +6,13 @@ import pdfExist from "../img/pdfExist.svg";
 // import pdfUpload from "../img/pdfUpload.svg";
 import addImage from "../img/addImage.svg";
 import addvideo from "../img/addVideo.svg";
+import { useNavigate } from "react-router-dom";
 
 const AssetDetail = () => {
+  const navigate = useNavigate();
+  const saveData = () => {
+    navigate("/propertisaya");
+  };
   return (
     <DetailAsset className='container'>
       <Breadcrumb BreadcrumbText={`Home / Properti / Rumah / Detail`} />
@@ -197,8 +202,9 @@ const AssetDetail = () => {
         </div>
 
         <ButtonContainer>
-          <ButtonStyled className='secondary'>Kembali</ButtonStyled>
-          <ButtonStyled className='primary'>Selanjutnya</ButtonStyled>
+          <ButtonStyled className='primary' onClick={saveData}>
+            Selanjutnya
+          </ButtonStyled>
         </ButtonContainer>
       </div>
     </DetailAsset>
@@ -206,6 +212,7 @@ const AssetDetail = () => {
 };
 
 const DetailAsset = styled.div`
+  margin-bottom: 50px;
   .hidden {
     display: none;
   }

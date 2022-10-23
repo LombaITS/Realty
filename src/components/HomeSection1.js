@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import LandingImage from "../img/landing.png";
 const HomeSection1 = () => {
+  const navigate = useNavigate();
+
+  const allProperty = () => {
+    navigate("/properti");
+  };
   return (
     <LandingPage>
       <LandingPageContainer className='container'>
@@ -73,7 +79,7 @@ const HomeSection1 = () => {
                 />
               </div>
             </SearchCategory>
-            <SearchButton>
+            <SearchButton onClick={allProperty}>
               FIND{" "}
               <svg
                 width='24'
@@ -243,6 +249,7 @@ const SearchButton = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 const TryAdvanceSearch = styled.div`
